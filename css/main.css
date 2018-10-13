@@ -10,18 +10,18 @@ html {
 
 h1 {
   color: #990073;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
   transform: rotate(-8deg);
 }
 
 p {
   color: #c09;
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
   transform: rotate(-5deg);
 }
 
 a {
-  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
 }
 
 .btn-ghost {
@@ -35,36 +35,139 @@ a {
   color: #c09;
 }
 
+.icecream-height {
+  min-height: 440px;
+}
+
 .text-container {
   max-width: 19em;
+  margin-bottom: 1.5em;
 }
 
 .cherry {
   z-index: 5;
+  left: -25%;
+  top: -87px;
+  transform: scale(.7);
+  transition: all 900ms ease-in;
+  animation: cherry-move 1600ms linear forwards;
 }
 
 .vanilla-fudge {
   z-index: 4;
   transform: scale(.7);
+  left: -25%;
+  top: -17px;
+  transition: all 900ms ease-in;
+  animation: vanilla-move 1500ms linear forwards;
 }
 
 .chocolate-chip {
-  left: 0%;
-  top: -125px;
+  left: -21%;
+  top: 54px;
   z-index: 3;
   transform: scale(.7);
-}
-
-.cone {
-  left: 0%;
-  top: 100px;
-  z-index: 2;
-  transform: scale(.7);
+  transition: all 900ms ease-in;
+  animation: choc-move 1400ms linear forwards;
 }
 
 .mint-chip {
-  left: 0%;
-  top: -50px;
+  left: -25%;
+  top: 138px;
   z-index: 1;
   transform: scale(.7);
+  transition: all 900ms ease-in;
+  animation: mint-move 1300ms linear forwards;
+}
+
+.cone {
+  left: -25%;
+  top: -5000px;
+  z-index: 2;
+  transform: scale(.7);
+  transition: all 900ms ease-in;
+  animation: cone-move 1200ms linear forwards;
+}
+
+.text-transition {
+  opacity: 0;
+  filter: blur(10px);
+  animation: text-opacity 1700ms linear forwards;
+}
+
+@keyframes cone-move {
+
+  0% {
+    top: -5000px;
+  }
+
+  100% {
+    top: 240px;
+  }
+
+}
+
+@keyframes mint-move {
+
+  0% {
+    top: -5000px;
+  }
+
+  100% {
+    top: 138px;
+  }
+
+}
+
+@keyframes choc-move {
+
+  0% {
+    top: -5000px;
+  }
+
+  100% {
+    top: 54px;
+  }
+
+}
+
+@keyframes vanilla-move {
+
+  0% {
+    top: -5000px;
+  }
+
+  100% {
+    top: -17px;
+  }
+
+}
+
+@keyframes cherry-move {
+
+  0% {
+    top: -5000px;
+  }
+
+  100% {
+    top: -87px;
+  }
+
+}
+
+@keyframes text-opacity {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
 }
